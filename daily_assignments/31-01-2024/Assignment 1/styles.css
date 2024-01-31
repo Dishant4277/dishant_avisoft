@@ -1,0 +1,46 @@
+header {
+  border: 2px solid grey;
+  margin: 10px;
+  padding: 0 20px;
+  background-color: bisque;
+}
+
+div {
+  border: 2px solid grey;
+  margin: 10px;
+  padding: 0 20px;
+}
+
+header h1 {
+  text-align: center;
+  color: blue;
+}
+
+.personal {
+  background-color: aquamarine;
+}
+
+.personal h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: brown;
+  text-align: center;
+}
+
+.personal p {
+  color: indigo;
+  text-align: justify;
+}
+
+.professional {
+  background-color: #dcffb7;
+}
+
+.professional h2 {
+  color: #ff6868;
+  text-align: center;
+}
+
+.professional p {
+  color: #280274;
+  text-align: justify;
+}
