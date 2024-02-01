@@ -1,0 +1,46 @@
+#parent-box {
+  display: flex;
+  background-color: aqua;
+  height: 280px;
+  width: 720px;
+}
+
+.child_box {
+  display: flex;
+  margin: 10px;
+  width: 90px;
+  flex-direction: column;
+}
+
+.number-box {
+  background-color: white;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.child_box:nth-child(2) {
+  height: 90px;
+  align-self: center;
+}
+.child_box:nth-child(3) {
+  height: 90px;
+  align-self: flex-start;
+}
+.child_box:nth-child(4) {
+  align-self: flex-end;
+  height: 90px;
+}
+
+.child_box:nth-child(1) p,
+.child_box:nth-child(5) p {
+  align-self: flex-start;
+  width: 10px;
+}
+
+.child_box:nth-child(2) p,
+.child_box:nth-child(3) p,
+.child_box:nth-child(4) p {
+  align-self: center;
+  width: 10px;
+}

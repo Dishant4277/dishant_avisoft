@@ -1,0 +1,88 @@
+body {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+.header {
+  background-color: aqua;
+  width: 500px;
+  text-align: center;
+}
+
+.center {
+  width: 500px;
+  height: 400px;
+  display: flex;
+  gap: 5px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 200px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
+.hero {
+  background-color: blueviolet;
+  height: 200px;
+  text-align: center;
+}
+
+.sidebar {
+  background-color: yellowgreen;
+  height: 300px;
+  text-align: center;
+}
+
+.main-content {
+  background-color: gold;
+  height: 300px;
+  text-align: center;
+}
+
+.extra {
+  background-color: gray;
+  height: 100px;
+  text-align: center;
+}
+
+.related {
+  width: 500px;
+  display: flex;
+  gap: 5px;
+}
+.related-img {
+  background-color: green;
+  width: 400px;
+  align-items: center;
+  text-align: center;
+}
+
+.related-posts {
+  background-color: lightpink;
+  text-align: center;
+}
+
+.footer {
+  width: 500px;
+  background-color: orange;
+  text-align: center;
+}
