@@ -1,0 +1,19 @@
+#main-header {
+  height: 200px;
+  text-align: center;
+}
+
+.child-card {
+  border: 1px solid black;
+  width: 25%;
+}
+#main-section {
+  display: flex;
+  gap: 10px;
+  border: 1px solid red;
+}
+
+.child-card:nth-child(1) {
+  border: 2px solid blue;
+  height: 500px;
+}
