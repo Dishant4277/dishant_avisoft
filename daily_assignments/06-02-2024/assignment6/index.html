@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 6</title>
+  </head>
+  <body>
+    <h1>Assignment 6</h1>
+
+    <script>
+      alert("Welcome to Calculator!!");
+
+      let num1 = parseFloat(prompt("Enter the value of Num 1: "));
+      let num2 = parseFloat(prompt("Enter the value of Num 2: "));
+
+      let op = prompt(
+        "Enter the operation to be performed: [add,subtract,multiply,divide]"
+      );
+
+      switch (op) {
+        case "add":
+          alert(
+            "The Value of Addition of " +
+              num1 +
+              " and " +
+              num2 +
+              " is: " +
+              (num1 + num2)
+          );
+          break;
+        case "subtract":
+          alert(
+            "The Value of Subtraction of " +
+              num1 +
+              " and " +
+              num2 +
+              " is: " +
+              (num1 - num2)
+          );
+          break;
+        case "multiply":
+          alert(
+            "The Value of Multiplication of " +
+              num1 +
+              " and " +
+              num2 +
+              " is: " +
+              num1 * num2
+          );
+          break;
+        case "divide":
+          alert(
+            "The Value of Division of " +
+              num1 +
+              " and " +
+              num2 +
+              " is: " +
+              num1 / num2
+          );
+          break;
+
+        default:
+          alert("Reload the site and enter a valid operation!!!");
+          break;
+      }
+
+      alert("Reload the site to calculate again!!!");
+    </script>
+  </body>
+</html>

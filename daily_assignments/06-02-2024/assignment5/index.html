@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 5</title>
+  </head>
+  <body>
+    <h1>Assignment 5</h1>
+
+    <script>
+      alert("Welcome to Multiplication Table!!");
+
+      let num = parseInt(prompt("Enter a number: "));
+      if (!isNaN(num)) {
+        for (let i = 1; i <= 10; i++) {
+          console.log(`${num} X ${i} = ${num * i}`);
+        }
+      } else {
+        alert("Reload and enter a valid number");
+      }
+    </script>
+  </body>
+</html>
