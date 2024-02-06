@@ -36,7 +36,7 @@ switch (op) {
         num1 * num2
     );
     break;
-  case "sub":
+  case "div":
     alert(
       "The Value of Division of " +
         num1 +

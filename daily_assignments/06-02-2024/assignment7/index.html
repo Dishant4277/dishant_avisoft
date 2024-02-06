@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 7</title>
+  </head>
+  <body>
+    <h1>Assignment 7</h1>
+
+    <script>
+      alert("Welcome to Falsy and Truthy Values Exploration Game!!");
+      let play = 1;
+      do {
+        let val = prompt("Enter a value");
+        if (
+          val === "" ||
+          val === "null" ||
+          val === "NaN" ||
+          val === "0" ||
+          val === "undefined" ||
+          val === "false" ||
+          val === "-0" ||
+          val === "0n"
+        ) {
+          alert("Value is Falsy");
+        } else {
+          alert("Value is Truthy");
+        }
+
+        play = parseInt(prompt("Enter 1 to explore again or 0 to exit"));
+      } while (play === 1);
+    </script>
+  </body>
+</html>

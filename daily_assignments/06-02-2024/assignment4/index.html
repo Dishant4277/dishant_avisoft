@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 4</title>
+  </head>
+  <body>
+    <h1>Assignment 4</h1>
+
+    <script>
+      alert("Welcome to Number Guessing game!!");
+      let play = 1;
+      do {
+        let rand = parseInt(Math.random() * 100) + 1;
+        console.log(rand);
+        let num = parseInt(prompt("Guess the number between 1 and 100"));
+        let count = 1;
+        while (num != rand) {
+          if (num > rand) {
+            alert("Too High");
+          } else if (num < rand) {
+            alert("Too Low");
+          }
+          num = parseInt(prompt("Guess Again!!"));
+          count++;
+        }
+
+        alert(`Congratulations!! You guessed the number in ${count} steps.`);
+
+        play = parseInt(prompt("Enter 1 to play again or 0 to exit !!"));
+      } while (play === 1);
+    </script>
+  </body>
+</html>
