@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 2</title>
+  </head>
+  <body>
+    <h1>Assignment 2</h1>
+
+    <script>
+      let x = BigInt("123456789012345678901234567890");
+      let arr = [
+        7,
+        "hello",
+        x,
+        8.5,
+        true,
+        undefined,
+        8,
+        null,
+        17.5,
+        "dishant",
+        false,
+      ];
+
+      console.log(arr);
+
+      let ans = 0;
+      function sum(arr) {
+        for (let a of arr) {
+          if (typeof a === "number") {
+            ans += a;
+          }
+        }
+      }
+      sum(arr);
+      console.log(`The sum of all numbers in the array is ${ans}`);
+    </script>
+  </body>
+</html>
