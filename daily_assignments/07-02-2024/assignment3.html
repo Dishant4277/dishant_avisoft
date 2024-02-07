@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 3</title>
+  </head>
+  <body>
+    <h1>Assignment 3</h1>
+
+    <script>
+      function countSteps(num, rand, count) {
+        while (num != rand) {
+          if (num > rand) {
+            alert("Too High");
+          } else if (num < rand) {
+            alert("Too Low");
+          }
+          num = parseInt(prompt("Guess Again!!"));
+          count++;
+        }
+        return count;
+      }
+      function guessNumberGame(num, rand) {
+        let count = 1;
+        count = countSteps(num, rand, count);
+        alert(`Congratulations!! You guessed the number in ${count} steps.`);
+        return count;
+      }
+      function play() {
+        alert("Welcome to Number Guessing game!!");
+        let scores = new Array();
+        let toPlay = 1;
+        do {
+          let rand = parseInt(Math.random() * 100) + 1;
+          console.log(rand);
+          let num = parseInt(prompt("Guess the number between 1 and 100"));
+          let score = guessNumberGame(num, rand);
+          scores.push(`${score} steps`);
+          toPlay = parseInt(prompt("Enter 1 to play again or 0 to exit !!"));
+        } while (toPlay === 1);
+
+        alert(`Well Done Playing!! Your Scores in the game: ${scores} `);
+      }
+
+      play();
+    </script>
+  </body>
+</html>

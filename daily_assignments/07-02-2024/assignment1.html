@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 1</title>
+  </head>
+  <body>
+    <h1>Assignment 1</h1>
+
+    <script>
+      alert("Welcome to Calculator");
+
+      function Calculator(num1, num2, op) {
+        switch (op) {
+          case "add":
+            add(num1, num2);
+            break;
+          case "sub":
+            sub(num1, num2);
+            break;
+          case "mul":
+            mul(num1, num2);
+            break;
+          case "div":
+            div(num1, num2);
+            break;
+          case "mod":
+            mod(num1, num2);
+            break;
+          default:
+            alert("Reload the site and enter a valid operation!!!");
+            break;
+        }
+      }
+
+      const add = (num1, num2) => {
+        alert(
+          "The Value of Addition of " +
+            num1 +
+            " and " +
+            num2 +
+            " is: " +
+            (num1 + num2)
+        );
+      };
+      const mul = (num1, num2) => {
+        alert(
+          "The Value of Multiplication of " +
+            num1 +
+            " and " +
+            num2 +
+            " is: " +
+            num1 * num2
+        );
+      };
+      const sub = (num1, num2) => {
+        alert(
+          "The Value of Subtraction of " +
+            num1 +
+            " and " +
+            num2 +
+            " is: " +
+            (num1 - num2)
+        );
+      };
+      const div = (num1, num2) => {
+        alert(
+          "The Value of Division of " +
+            num1 +
+            " and " +
+            num2 +
+            " is: " +
+            num1 / num2
+        );
+      };
+      const mod = (num1, num2) => {
+        alert(
+          "The Value of Modulo of " +
+            num1 +
+            " and " +
+            num2 +
+            " is: " +
+            (num1 % num2)
+        );
+      };
+
+      let calculate = 1;
+      while (calculate == 1) {
+        let num1 = parseFloat(prompt("Enter the value of Num 1: "));
+        let num2 = parseFloat(prompt("Enter the value of Num 2: "));
+
+        let op = prompt(
+          "Enter the operation to be performed: [add,sub,mul,div,mod]"
+        );
+        Calculator(num1, num2, op);
+        calculate = prompt("Enter 1 to calculate again and 0 to exit");
+      }
+    </script>
+  </body>
+</html>
