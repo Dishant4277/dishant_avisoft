@@ -21,7 +21,10 @@
         }
         return count;
       }
-      function guessNumberGame(num, rand) {
+      function guessNumberGame() {
+        let rand = parseInt(Math.random() * 100) + 1;
+        console.log(rand);
+        let num = parseInt(prompt("Guess the number between 1 and 100"));
         let count = 1;
         count = countSteps(num, rand, count);
         alert(`Congratulations!! You guessed the number in ${count} steps.`);
@@ -32,10 +35,7 @@
         let scores = new Array();
         let toPlay = 1;
         do {
-          let rand = parseInt(Math.random() * 100) + 1;
-          console.log(rand);
-          let num = parseInt(prompt("Guess the number between 1 and 100"));
-          let score = guessNumberGame(num, rand);
+          let score = guessNumberGame();
           scores.push(`${score} steps`);
           toPlay = parseInt(prompt("Enter 1 to play again or 0 to exit !!"));
         } while (toPlay === 1);
