@@ -68,7 +68,7 @@ function borrow(name) {
   for (let book of Library) {
     if (book.id === id) {
       borrowed = true;
-      if (book.isBorrowed === false) {
+      if (!book.isBorrowed) {
         book.isBorrowed = true;
         console.log(book);
         alert(
@@ -93,7 +93,7 @@ function returnBook(name) {
   for (let book of Library) {
     if (book.id === id) {
       returned = true;
-      if (book.isBorrowed === true) {
+      if (book.isBorrowed) {
         book.isBorrowed = false;
         console.log(book);
         alert(
