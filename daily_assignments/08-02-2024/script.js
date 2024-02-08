@@ -22,7 +22,7 @@ function addBook(desg) {
     let author = prompt("Enter the Author of the Book: ");
     let book = new Book(id++, title, author);
     Library.push(book);
-    alert(`${title} by ${author} Book is added in the Library!!`);
+    alert(`ID-${book.id} ${title} by ${author} Book is added in the Library!!`);
     console.log(Library);
   } else {
     alert(
@@ -33,13 +33,13 @@ function addBook(desg) {
 }
 
 function searchBook() {
-  let title = prompt("Enter the title of the book");
+  let title = prompt("Enter the title of the book: ");
   let isBook = false;
   for (let book of Library) {
     if (book.title === title) {
       isBook = true;
       alert(
-        `Here is the Book you are searching: title- ${book.title}, author- ${book.author}`
+        `Here is the Book you are searching: Id-${book.id} title- ${book.title}, author- ${book.author}`
       );
     }
   }
@@ -52,7 +52,7 @@ function availableBooks() {
   let books = [];
   for (let book of Library) {
     if (!book.isBorrowed) {
-      books.push(` ${book.title} By ${book.author} `);
+      books.push(` ID-${book.id} ${book.title} By ${book.author} `);
     }
   }
   alert(`These are the available books: ${books}`);
@@ -61,14 +61,16 @@ function availableBooks() {
 function borrow(name) {
   alert("Find the book which you want to borrow!!");
   availableBooks();
-  let title = prompt("Enter the title of the book: ");
+  let id = parseInt(prompt("Enter the ID of the book: "));
   let borrowed = false;
   for (let book of Library) {
-    if (book.title === title) {
+    if (book.id === id) {
       book.isBorrowed = true;
       borrowed = true;
       console.log(book);
-      alert(`${book.title} By ${book.author} is borrowed by ${name}`);
+      alert(
+        `ID- ${book.id} ${book.title} By ${book.author} is borrowed by ${name}`
+      );
     }
   }
 
@@ -79,14 +81,18 @@ function borrow(name) {
 }
 
 function returnBook(name) {
-  let title = prompt("Enter the title of the book which you want to return: ");
+  let id = parseInt(
+    prompt("Enter the ID of the book which you want to return: ")
+  );
   let returned = false;
   for (let book of Library) {
-    if (book.title === title) {
+    if (book.id === id) {
       book.isBorrowed = false;
       returned = true;
       console.log(book);
-      alert(`${book.title} By ${book.author} is returned by ${name}`);
+      alert(
+        `ID- ${book.id} ${book.title} By ${book.author} is returned by ${name}`
+      );
     }
   }
 
