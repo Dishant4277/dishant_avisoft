@@ -22,11 +22,13 @@ function addBook(desg) {
     let author = prompt("Enter the Author of the Book: ");
     let book = new Book(id++, title, author);
     Library.push(book);
-    alert(`ID-${book.id} ${title} by ${author} Book is added in the Library!!`);
+    alert(
+      `ID: ${book.id}, ${title} by ${author} Book is added in the Library!!`
+    );
     console.log(Library);
   } else {
     alert(
-      "You are a student!! You are not entitled to add books to the library. Kindly enter valid tasks."
+      "You are a student!! You are not entitled to add books to the library. Kindly enter a valid Choice."
     );
     library(desg);
   }
@@ -39,7 +41,7 @@ function searchBook() {
     if (book.title === title) {
       isBook = true;
       alert(
-        `Here is the Book you are searching: Id-${book.id} title- ${book.title}, author- ${book.author}`
+        `Here is the Book you searched for: \nID: ${book.id}, ${book.title} By ${book.author}`
       );
     }
   }
@@ -52,7 +54,7 @@ function availableBooks() {
   let books = [];
   for (let book of Library) {
     if (!book.isBorrowed) {
-      books.push(` ID-${book.id} ${book.title} By ${book.author} `);
+      books.push(` \nID: ${book.id}, ${book.title} By ${book.author} `);
     }
   }
   alert(`These are the available books: ${books}`);
@@ -65,18 +67,21 @@ function borrow(name) {
   let borrowed = false;
   for (let book of Library) {
     if (book.id === id) {
-      book.isBorrowed = true;
       borrowed = true;
-      console.log(book);
-      alert(
-        `ID- ${book.id} ${book.title} By ${book.author} is borrowed by ${name}`
-      );
+      if (book.isBorrowed === false) {
+        book.isBorrowed = true;
+        console.log(book);
+        alert(
+          `ID: ${book.id}, ${book.title} By ${book.author} is borrowed by ${name}`
+        );
+      } else {
+        alert("Sorry!! This book is currently not available.");
+      }
     }
   }
 
   if (!borrowed) {
-    alert("Enter a valid book's title");
-    borrow(name);
+    alert("Enter a valid book's ID");
   }
 }
 
@@ -87,25 +92,28 @@ function returnBook(name) {
   let returned = false;
   for (let book of Library) {
     if (book.id === id) {
-      book.isBorrowed = false;
       returned = true;
-      console.log(book);
-      alert(
-        `ID- ${book.id} ${book.title} By ${book.author} is returned by ${name}`
-      );
+      if (book.isBorrowed === true) {
+        book.isBorrowed = false;
+        console.log(book);
+        alert(
+          `ID: ${book.id}, ${book.title} By ${book.author} is returned by ${name}`
+        );
+      } else {
+        alert("Please enter ID of the book which you borrowed!!");
+      }
     }
   }
 
   if (!returned) {
     alert("Enter a valid book's title");
-    returnBook(name);
   }
 }
 
 function library(name, desg) {
   let op = parseInt(
     prompt(
-      "Enter [1: Search for a Book, 2: List Available Books, 3: Borrow a Book, 4: Return a Book, 5: Add a Book, 0: exit ]"
+      "Enter your choice \n1: Search for a Book \n2: List Available Books \n3: Borrow a Book \n4: Return a Book \n5: Add a Book \n0: exit "
     )
   );
 
@@ -148,13 +156,13 @@ function library(name, desg) {
 
 let name = prompt("Enter your name: ");
 let designation = parseInt(
-  prompt("Enter your Designation: [0: Student, 1: Professor, 2: Librarian]")
+  prompt("Enter your Designation: \n0: Student \n1: Professor \n2: Librarian")
 );
 
 while (designation != 0 && designation != 1 && designation != 2) {
   designation = parseInt(
     prompt(
-      "Enter a valid Designation: [0: Student, 1: Professor, 2: Librarian]"
+      "Enter a valid Designation: \n0: Student \n1: Professor \n2: Librarian"
     )
   );
 }
