@@ -106,7 +106,7 @@ function returnBook(name) {
   }
 
   if (!returned) {
-    alert("Enter a valid book's title");
+    alert("Enter a valid book's ID");
   }
 }
 
