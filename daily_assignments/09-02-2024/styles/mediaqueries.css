@@ -1,0 +1,112 @@
+@media screen and (max-width: 1400px) {
+  section {
+    height: 60vh;
+  }
+  #search {
+    height: 80vh;
+  }
+  .mySlides img {
+    height: 40vh;
+  }
+  select {
+    font-size: 15px;
+  }
+  input[type="text"] {
+    font-size: 15px;
+  }
+  .search-container button {
+    font-size: 15px;
+  }
+  .btn {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #search {
+    height: 90vh;
+  }
+  section {
+    height: 80vh;
+  }
+  input[type="text"] {
+    width: 90%;
+  }
+  .add-form button {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  #search {
+    height: 100vh;
+  }
+  section {
+    height: 90vh;
+  }
+  .logo {
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 15px;
+  }
+  td,
+  th {
+    font-size: 15px;
+  }
+  .add-form p {
+    font-size: 18px;
+  }
+  .add-form label {
+    font-size: 15px;
+  }
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  input[type="text"] {
+    width: 80%;
+  }
+  .add-form button {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .logo {
+    font-size: 0.9rem;
+  }
+  h2 {
+    font-size: 15px;
+  }
+  p {
+    font-size: 10px;
+  }
+  td,
+  th {
+    font-size: 10px;
+  }
+  input[type="text"] {
+    width: 70%;
+  }
+  .btn {
+    font-size: 10px;
+  }
+}
